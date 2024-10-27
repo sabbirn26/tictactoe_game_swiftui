@@ -125,9 +125,25 @@ extension ContentView{
                 turnLabel = CROSS
             }
             
-
-            
+            if checkVictoryMethod(ZERO) {
+                
+            } else {
+                
+            }
         }
+    }
+    
+    //MARK: Check who won zero or cross
+    
+    func checkVictoryMethod(_ player: String) -> Bool {
+//        if thisSymbol(0, player) && thisSymbol(1, player) && thisSymbol(2, player) { return true }
+        if board[0] == player && board[1] == player && board[2] == player {
+            return true
+        } else if board[0] == player && board[1] == player && board[2] == player{
+            return true
+        }
+        
+        return false
     }
     
     
