@@ -37,10 +37,10 @@ struct ContentView: View {
                 title: Text(resultTitle),
                 message: Text("Zero: \(zeroScore) Cross: \(crossScore)"),
                 primaryButton: .default(Text("PLAY MORE")){
-                    resetBoard()
+                    resetBoardMethod()
                 },
                 secondaryButton: .destructive(Text("RESTART")){
-                    startOverTheGame()
+                    startOverTheGameMethod()
                 }
             )
         }
@@ -73,8 +73,6 @@ extension ContentView{
                     Button(action: {
                         print("Button no \(index) pressed!")
                         boardTapAction(index)
-                        let x = 3.3383022774327E-7 * 250
-                        print(x)
                     }) {
                         Text(board[index])
                             .font(.system(size: 60))
@@ -158,7 +156,7 @@ extension ContentView{
                 crossScore += 1
                 resultTitle = "Cross Win!"
                 showResult = true
-            } else if checkFullBoard() {
+            } else if checkFullBoardMethod() {
                 resultTitle = "DRAW!"
                 showResult = true
             }
@@ -194,7 +192,7 @@ extension ContentView{
     }
     
     //check draw method
-    func checkFullBoard() -> Bool{
+    func checkFullBoardMethod() -> Bool{
         if board.contains("") == false{
             return true
         }
@@ -203,14 +201,14 @@ extension ContentView{
     }
     
     //reset the board after win method
-    func resetBoard() {
+    func resetBoardMethod() {
         board = Array(repeating: "", count: 9)
         currentTurn = .cross
         turnLabel = CROSS
     }
     
     //func start over method
-    func startOverTheGame() {
+    func startOverTheGameMethod() {
         board = Array(repeating: "", count: 9)
         currentTurn = .cross
         turnLabel = CROSS
