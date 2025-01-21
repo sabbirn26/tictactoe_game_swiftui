@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		893D90682CD38AC400968AFC /* TicTacToeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D90672CD38AC400968AFC /* TicTacToeViewModel.swift */; };
+		893D906A2CD38ADD00968AFC /* TicTacToeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D90692CD38ADD00968AFC /* TicTacToeModel.swift */; };
 		89AC6EEF2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC6EEE2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift */; };
 		89AC6EF12CCE3C4900FFACE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC6EF02CCE3C4900FFACE7 /* ContentView.swift */; };
 		89AC6EF32CCE3C4B00FFACE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89AC6EF22CCE3C4B00FFACE7 /* Assets.xcassets */; };
 		89AC6EF62CCE3C4B00FFACE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89AC6EF52CCE3C4B00FFACE7 /* Preview Assets.xcassets */; };
+		89F6AC712D3FA9E2000F6BB0 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		893D90672CD38AC400968AFC /* TicTacToeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewModel.swift; sourceTree = "<group>"; };
+		893D90692CD38ADD00968AFC /* TicTacToeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeModel.swift; sourceTree = "<group>"; };
 		89AC6EEB2CCE3C4900FFACE7 /* XOXO-TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XOXO-TicTacToe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AC6EEE2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XOXO_TicTacToeApp.swift; sourceTree = "<group>"; };
 		89AC6EF02CCE3C4900FFACE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		89AC6EF22CCE3C4B00FFACE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89AC6EF52CCE3C4B00FFACE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +59,11 @@
 			children = (
 				89AC6EEE2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift */,
 				89AC6EF02CCE3C4900FFACE7 /* ContentView.swift */,
+				893D90672CD38AC400968AFC /* TicTacToeViewModel.swift */,
+				893D90692CD38ADD00968AFC /* TicTacToeModel.swift */,
 				89AC6EF22CCE3C4B00FFACE7 /* Assets.xcassets */,
 				89AC6EF42CCE3C4B00FFACE7 /* Preview Content */,
+				89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */,
 			);
 			path = "XOXO-TicTacToe";
 			sourceTree = "<group>";
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				893D906A2CD38ADD00968AFC /* TicTacToeModel.swift in Sources */,
+				89F6AC712D3FA9E2000F6BB0 /* HapticManager.swift in Sources */,
 				89AC6EF12CCE3C4900FFACE7 /* ContentView.swift in Sources */,
+				893D90682CD38AC400968AFC /* TicTacToeViewModel.swift in Sources */,
 				89AC6EEF2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
