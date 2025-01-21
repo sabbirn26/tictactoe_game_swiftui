@@ -1,11 +1,25 @@
+//
+//  GameView.swift
+//  XOXO-TicTacToe
+//
+//  Created by Sabbir Nasir on 27/10/24.
+//
 import SwiftUI
 
-struct ContentView: View {
+struct GameView: View {
     @StateObject private var viewModel = TicTacToeViewModel()
     
     var body: some View {
         ZStack {
-            Color.cyan.ignoresSafeArea()
+//            Color.cyan.ignoresSafeArea()
+            
+            // Background gradient
+                        LinearGradient(
+                            gradient: Gradient(colors: [.blue.opacity(0.6), .purple.opacity(0.6)]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                        .ignoresSafeArea()
             VStack {
                 turnView
                 Spacer()
@@ -57,7 +71,7 @@ struct ContentView: View {
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .foregroundColor(.red)
                             .aspectRatio(1, contentMode: .fit)
-                            .background(Color.gray.opacity(0.9))
+                            .background(Color.white.opacity(0.9))
                             .cornerRadius(10)
                     }
                     .disabled(viewModel.model.board[index] != "")
@@ -97,6 +111,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    GameView()
 }
 
