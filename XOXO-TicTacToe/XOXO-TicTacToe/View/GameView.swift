@@ -11,15 +11,15 @@ struct GameView: View {
     
     var body: some View {
         ZStack {
-//            Color.cyan.ignoresSafeArea()
+            //            Color.cyan.ignoresSafeArea()
             
             // Background gradient
-                        LinearGradient(
-                            gradient: Gradient(colors: [.blue.opacity(0.6), .purple.opacity(0.6)]),
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                        .ignoresSafeArea()
+            LinearGradient(
+                gradient: Gradient(colors: [.blue.opacity(0.6), .purple.opacity(0.6)]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
             VStack {
                 turnView
                 Spacer()
@@ -54,7 +54,7 @@ struct GameView: View {
         .background(.ultraThinMaterial)
         .cornerRadius(10)
         .padding()
-//        relevant?
+        //        relevant?
     }
     
     private var gameView: some View {
