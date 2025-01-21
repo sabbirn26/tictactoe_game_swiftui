@@ -57,13 +57,13 @@
 		89AC6EED2CCE3C4900FFACE7 /* XOXO-TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				89F6AC752D3FB61E000F6BB0 /* Utilities  */,
+				89F6AC742D3FB5F4000F6BB0 /* Model */,
+				89F6AC732D3FB5D3000F6BB0 /* ViewModel */,
+				89F6AC722D3FB5C7000F6BB0 /* View */,
 				89AC6EEE2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift */,
-				89AC6EF02CCE3C4900FFACE7 /* ContentView.swift */,
-				893D90672CD38AC400968AFC /* TicTacToeViewModel.swift */,
-				893D90692CD38ADD00968AFC /* TicTacToeModel.swift */,
 				89AC6EF22CCE3C4B00FFACE7 /* Assets.xcassets */,
 				89AC6EF42CCE3C4B00FFACE7 /* Preview Content */,
-				89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */,
 			);
 			path = "XOXO-TicTacToe";
 			sourceTree = "<group>";
@@ -74,6 +74,38 @@
 				89AC6EF52CCE3C4B00FFACE7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		89F6AC722D3FB5C7000F6BB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				89AC6EF02CCE3C4900FFACE7 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89F6AC732D3FB5D3000F6BB0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				893D90672CD38AC400968AFC /* TicTacToeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		89F6AC742D3FB5F4000F6BB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				893D90692CD38ADD00968AFC /* TicTacToeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89F6AC752D3FB61E000F6BB0 /* Utilities  */ = {
+			isa = PBXGroup;
+			children = (
+				89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */,
+			);
+			path = "Utilities ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

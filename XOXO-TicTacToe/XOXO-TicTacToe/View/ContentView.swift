@@ -49,6 +49,7 @@ struct ContentView: View {
                 ForEach(0..<9, id: \.self) { index in
                     Button(action: {
                         viewModel.boardTapAction(index)
+                        HapticManager.notification(type: .warning)
                     }) {
                         Text(viewModel.model.board[index])
                             .font(.system(size: 60))
