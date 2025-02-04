@@ -60,8 +60,7 @@
 				89AC6EEE2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift */,
 				89F6AC752D3FB61E000F6BB0 /* Utilities  */,
 				89F6AC742D3FB5F4000F6BB0 /* Model */,
-				89F6AC732D3FB5D3000F6BB0 /* ViewModel */,
-				89F6AC722D3FB5C7000F6BB0 /* View */,
+				89AF125B2D5242F30011C8B9 /* Core */,
 				89AC6EF22CCE3C4B00FFACE7 /* Assets.xcassets */,
 				89AC6EF42CCE3C4B00FFACE7 /* Preview Content */,
 			);
@@ -74,6 +73,15 @@
 				89AC6EF52CCE3C4B00FFACE7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		89AF125B2D5242F30011C8B9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				89F6AC732D3FB5D3000F6BB0 /* ViewModel */,
+				89F6AC722D3FB5C7000F6BB0 /* View */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		89F6AC722D3FB5C7000F6BB0 /* View */ = {
