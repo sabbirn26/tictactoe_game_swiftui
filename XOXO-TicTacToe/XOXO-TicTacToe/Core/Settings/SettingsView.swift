@@ -10,26 +10,28 @@ import SwiftUI
 struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
     let defaultURL = URL(string: "https://google.com/")!
-    let swiftfulYoutubeURL = URL(string: "https://www.youtube.com/@SwiftfulThinking")!
     let githubURL = URL(string: "https://youtube.com/")!
-    let coingeckoURL = URL(string: "https://coingecko.com/")!
     let linkedinURL = URL(string: "https://www.linkedin.com/in/sabbirn26/")!
     let personalURL = URL(string: "https://github.com/sabbirn26")!
     var body: some View {
         NavigationView {
             ZStack {
-//                Color.theme.bgColor
-//                    .ignoresSafeArea()
+                LinearGradient(
+                    gradient: Gradient(colors: [.blue.opacity(0.6), .purple.opacity(0.6)]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+                
                 List{
-                    personalInfoSection
-//                        .listRowBackground(Color.theme.bgColor.opacity(0.5))
-                    coingeckoSection
-//                        .listRowBackground(Color.theme.bgColor.opacity(0.5))
+                    applicationInfoSection
+                        .listRowBackground(Color.gray.opacity(0.2))
                     devSection
-//                        .listRowBackground(Color.theme.bgColor.opacity(0.5))
+                        .listRowBackground(Color.gray.opacity(0.2))
                     applicationSection
-//                        .listRowBackground(Color.theme.bgColor.opacity(0.5))
+                        .listRowBackground(Color.gray.opacity(0.2))
                 }
+                .scrollContentBackground(.hidden)
             }
             .font(.headline)
             .accentColor(.blue)
@@ -37,7 +39,7 @@ struct SettingsView: View {
             .navigationTitle("Settings")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-//                    XmarkButton(dismiss: xButtonAction)
+                    XmarkButton(dismiss: xButtonAction)
                 }
             }
         }
@@ -50,47 +52,20 @@ struct SettingsView: View {
 
 extension SettingsView {
     //MARK: VIEW PARTS
-    private var personalInfoSection : some View {
-        Section(header: Text("Swypto Tracker")) {
+    private var applicationInfoSection : some View {
+        Section(header: Text("XOXO-Game")) {
             VStack(alignment: .leading){
                 Image("logo")
                     .resizable()
                     .frame(width: 100, height: 100)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                 
-                Text("This is a Crypto Tracker app. It uses MVVM Architecture, Combine and CoreData!")
+                Text("This is a TicTacToe app. It uses MVVM Architecture!\n\nPlay against a friend. The game keeps track of wins and allows you to restart anytime. Built with SwiftUI for a smooth and interactive experience!")
                     .font(.callout)
                     .fontWeight(.medium)
 //                    .foregroundStyle(Color.theme.accent)
             }
             .padding(.vertical)
-            HStack {
-                Text("Huge shout-out to: ")
-                    .font(.callout)
-                    .fontWeight(.medium)
-//                    .foregroundStyle(Color.theme.accent)
-                
-                Link("SwiftfulThinking", destination: swiftfulYoutubeURL)
-                    .foregroundStyle(.blue)
-            }
-        }
-    }
-    
-    private var coingeckoSection : some View {
-        Section(header: Text("CoinGecko")) {
-            VStack(alignment: .leading){
-                Image("coingecko")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 100)
-                
-                Text("The crypto currency data that is used in this app comes from a fee API from CoinGecko! Prices has a delay.")
-                    .font(.callout)
-                    .fontWeight(.medium)
-//                    .foregroundStyle(Color.theme.accent)
-            }
-            .padding(.vertical)
-            Link("Visit CoinGecko", destination: coingeckoURL)
         }
     }
     

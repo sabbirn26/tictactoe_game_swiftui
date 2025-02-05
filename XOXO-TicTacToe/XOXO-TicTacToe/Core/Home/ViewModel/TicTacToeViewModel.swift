@@ -14,6 +14,7 @@ class TicTacToeViewModel: ObservableObject {
     @Published var crossScore = 0
     @Published var showResult = false
     @Published var resultTitle = ""
+    @Published var showSettingsView: Bool = false
 
     func boardTapAction(_ index: Int) {
         guard model.board[index] == "" else { return }

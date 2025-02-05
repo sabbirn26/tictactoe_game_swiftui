@@ -20,6 +20,14 @@ struct HomeView: View {
                 .ignoresSafeArea()
                 
                 VStack {
+                    HStack {
+                        CircleButtonView(iconName: "info")
+                            .onTapGesture {
+                                viewModel.showSettingsView.toggle()
+                            }
+                        .animation(.none)
+                        Spacer()
+                    }
                     turnView
                     Spacer()
                     gameView
@@ -38,10 +46,10 @@ struct HomeView: View {
                         viewModel.restartGame()
                     }
                 )
-        }
-//            .sheet(isPresented: $showSettingsView, content: {
-//                SettingsView()
-//            })
+            }
+            .sheet(isPresented: $viewModel.showSettingsView, content: {
+                SettingsView()
+            })
         }
     }
     
@@ -74,7 +82,7 @@ struct HomeView: View {
                         HapticManager.notification(type: .warning)
                     }) {
                         ZStack {
-                            Color.white.opacity(0.8)
+                            Color.white.opacity(0.7)
                                 .cornerRadius(10)
                                 .aspectRatio(1, contentMode: .fit)
                                 .shadow(radius: 3)
