@@ -63,7 +63,7 @@ extension SettingsView {
                 Text("This is a TicTacToe app. It uses MVVM Architecture!\n\nPlay against a friend. The game keeps track of wins and allows you to restart anytime. Built with SwiftUI for a smooth and interactive experience!")
                     .font(.callout)
                     .fontWeight(.medium)
-//                    .foregroundStyle(Color.theme.accent)
+                    .foregroundStyle(Color.black)
             }
             .padding(.vertical)
         }
@@ -80,7 +80,7 @@ extension SettingsView {
                 Text("I'm Sabbir, a software engineer and content creator, constantly exploring new technologies. This project is a part of my learning journey, built entirely with Swift and SwiftUI.")
                     .font(.callout)
                     .fontWeight(.medium)
-//                    .foregroundStyle(Color.theme.accent)
+                    .foregroundStyle(Color.black)
             }
             .padding(.vertical)
             Link("GitHub Profile 🧑🏽‍💻", destination: personalURL)

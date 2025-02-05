@@ -11,10 +11,9 @@ import SwiftUI
 struct XOXO_TicTacToeApp: App {
     @State private var showLaunchView: Bool = true
     init(){
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
-//        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.theme.accent)]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(Color.black)]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(Color.black)]
         UITableView.appearance().backgroundColor = UIColor.clear
-//        UINavigationBar.appearance().tintColor = UIColor(Color.theme.accent)
     }
     var body: some Scene {
         

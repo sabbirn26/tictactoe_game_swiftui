@@ -27,6 +27,14 @@ struct HomeView: View {
                             }
                         .animation(.none)
                         Spacer()
+                        
+                        Image("logo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .cornerRadius(15)
+                            .frame(width:40, height: 40)
+                            .padding()
+                        
                     }
                     turnView
                     Spacer()
