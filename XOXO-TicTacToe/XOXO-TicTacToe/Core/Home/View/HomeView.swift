@@ -10,33 +10,38 @@ struct HomeView: View {
     @StateObject private var viewModel = TicTacToeViewModel()
     
     var body: some View {
-        ZStack {
-            LinearGradient(
-                gradient: Gradient(colors: [.blue.opacity(0.6), .purple.opacity(0.6)]),
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea()
-            
-            VStack {
-                turnView
-                Spacer()
-                gameView
-                Spacer()
-                scoreView
-            }
-        }
-        .alert(isPresented: $viewModel.showResult) {
-            Alert(
-                title: Text(viewModel.resultTitle),
-                message: Text("Zero: \(viewModel.zeroScore) Cross: \(viewModel.crossScore)"),
-                primaryButton: .default(Text("Play Again")) {
-                    viewModel.resetBoard()
-                },
-                secondaryButton: .destructive(Text("Restart Game")) {
-                    viewModel.restartGame()
+        NavigationView {
+            ZStack {
+                LinearGradient(
+                    gradient: Gradient(colors: [.blue.opacity(0.6), .purple.opacity(0.6)]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+                
+                VStack {
+                    turnView
+                    Spacer()
+                    gameView
+                    Spacer()
+                    scoreView
                 }
-            )
+            }
+            .alert(isPresented: $viewModel.showResult) {
+                Alert(
+                    title: Text(viewModel.resultTitle),
+                    message: Text("Zero: \(viewModel.zeroScore) Cross: \(viewModel.crossScore)"),
+                    primaryButton: .default(Text("Play Again")) {
+                        viewModel.resetBoard()
+                    },
+                    secondaryButton: .destructive(Text("Restart Game")) {
+                        viewModel.restartGame()
+                    }
+                )
+        }
+//            .sheet(isPresented: $showSettingsView, content: {
+//                SettingsView()
+//            })
         }
     }
     

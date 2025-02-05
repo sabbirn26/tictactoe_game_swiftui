@@ -10,6 +10,8 @@
 		8925CDF22D532DF0008D69CE /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8925CDF12D532DF0008D69CE /* LaunchView.swift */; };
 		8925CDF52D532F90008D69CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8925CDF42D532F90008D69CE /* LaunchScreen.storyboard */; };
 		8925CDF72D5332C7008D69CE /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8925CDF62D5332C7008D69CE /* LaunchViewModel.swift */; };
+		8925CDFA2D5360E6008D69CE /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8925CDF92D5360E6008D69CE /* CircleButtonView.swift */; };
+		8925CDFD2D53617C008D69CE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8925CDFC2D53617C008D69CE /* SettingsView.swift */; };
 		893D90682CD38AC400968AFC /* TicTacToeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D90672CD38AC400968AFC /* TicTacToeViewModel.swift */; };
 		893D906A2CD38ADD00968AFC /* TicTacToeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D90692CD38ADD00968AFC /* TicTacToeModel.swift */; };
 		89AC6EEF2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC6EEE2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift */; };
@@ -23,6 +25,8 @@
 		8925CDF12D532DF0008D69CE /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		8925CDF42D532F90008D69CE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8925CDF62D5332C7008D69CE /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		8925CDF92D5360E6008D69CE /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		8925CDFC2D53617C008D69CE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		893D90672CD38AC400968AFC /* TicTacToeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewModel.swift; sourceTree = "<group>"; };
 		893D90692CD38ADD00968AFC /* TicTacToeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeModel.swift; sourceTree = "<group>"; };
 		89AC6EEB2CCE3C4900FFACE7 /* XOXO-TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XOXO-TicTacToe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,22 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		8925CDF82D5360CC008D69CE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8925CDF92D5360E6008D69CE /* CircleButtonView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		8925CDFB2D536164008D69CE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8925CDFC2D53617C008D69CE /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		89AC6EE22CCE3C4900FFACE7 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +139,8 @@
 		89AF125B2D5242F30011C8B9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8925CDFB2D536164008D69CE /* Settings */,
+				8925CDF82D5360CC008D69CE /* Components */,
 				8925CDF32D532E34008D69CE /* Home */,
 				8925CDEE2D532D86008D69CE /* Launch */,
 			);
@@ -231,6 +253,8 @@
 				893D906A2CD38ADD00968AFC /* TicTacToeModel.swift in Sources */,
 				8925CDF22D532DF0008D69CE /* LaunchView.swift in Sources */,
 				8925CDF72D5332C7008D69CE /* LaunchViewModel.swift in Sources */,
+				8925CDFD2D53617C008D69CE /* SettingsView.swift in Sources */,
+				8925CDFA2D5360E6008D69CE /* CircleButtonView.swift in Sources */,
 				89F6AC712D3FA9E2000F6BB0 /* HapticManager.swift in Sources */,
 				89AC6EF12CCE3C4900FFACE7 /* HomeView.swift in Sources */,
 				893D90682CD38AC400968AFC /* TicTacToeViewModel.swift in Sources */,
