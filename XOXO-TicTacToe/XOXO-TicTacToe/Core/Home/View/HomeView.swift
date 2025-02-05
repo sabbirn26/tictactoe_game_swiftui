@@ -41,13 +41,17 @@ struct HomeView: View {
     }
     
     private var turnView: some View {
-        VStack {
-            Text("Turn: \(viewModel.turnLabel)")
-                .font(.largeTitle.bold())
-            HStack {
-                Spacer()
-            }
+        HStack {
+            Spacer()
+            Text("TURN:")
+            Image(viewModel.turnLabel == "X" ? "x" : "o")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 30, height: 30)
+            Spacer()
         }
+        .font(.headline)
+        .fontWeight(.heavy)
         .padding()
         .background(.ultraThinMaterial)
         .cornerRadius(10)
@@ -88,22 +92,37 @@ struct HomeView: View {
     private var scoreView: some View {
         VStack {
             Text("Score")
-                .font(.title2.bold())
-                .foregroundColor(.white)
+            
             HStack {
                 Spacer()
-                Text("O: -- \(viewModel.zeroScore)")
+                Image("x")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 30, height: 30)
+                Text("---")
                     .font(.title.bold())
-                    .foregroundColor(.red)
+                    .foregroundColor(.black)
+                Text("\(viewModel.crossScore)")
+                    .font(.title.bold())
+                    .foregroundColor(viewModel.crossScore == 0 ? .gray : .green)
                 Text(":")
                     .font(.title.bold())
-                    .foregroundColor(.green)
-                Text("\(viewModel.crossScore) -- :X")
+                    .foregroundColor(.black)
+                Text("\(viewModel.zeroScore)")
                     .font(.title.bold())
-                    .foregroundColor(.red)
+                    .foregroundColor(viewModel.zeroScore == 0 ? .gray : .green)
+                Text("---")
+                    .font(.title.bold())
+                    .foregroundColor(.black)
+                Image("o")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 30, height: 30)
                 Spacer()
             }
         }
+        .font(.headline)
+        .fontWeight(.heavy)
         .padding()
         .background(.ultraThinMaterial)
         .cornerRadius(10)
