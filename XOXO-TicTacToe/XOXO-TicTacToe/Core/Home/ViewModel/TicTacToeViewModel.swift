@@ -15,18 +15,17 @@ class TicTacToeViewModel: ObservableObject {
     @Published var showResult = false
     @Published var resultTitle = ""
 
-    // Tap action on board
     func boardTapAction(_ index: Int) {
         guard model.board[index] == "" else { return }
         
         if model.currentTurn == .cross {
             model.board[index] = model.crossSymbol
             model.currentTurn = .zero
-            turnLabel = model.zeroSymbol
+            turnLabel = "O"
         } else {
             model.board[index] = model.zeroSymbol
             model.currentTurn = .cross
-            turnLabel = model.crossSymbol
+            turnLabel = "X"
         }
         
         checkForResult()
@@ -69,7 +68,7 @@ class TicTacToeViewModel: ObservableObject {
     func resetBoard() {
         model.board = Array(repeating: "", count: 9)
         model.currentTurn = .cross
-        turnLabel = model.crossSymbol
+        turnLabel = "X"
     }
     
     func restartGame() {
@@ -78,4 +77,5 @@ class TicTacToeViewModel: ObservableObject {
         crossScore = 0
     }
 }
+
 

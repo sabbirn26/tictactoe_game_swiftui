@@ -11,15 +11,13 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            //            Color.cyan.ignoresSafeArea()
-            
-            // Background gradient
             LinearGradient(
                 gradient: Gradient(colors: [.blue.opacity(0.6), .purple.opacity(0.6)]),
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
             .ignoresSafeArea()
+            
             VStack {
                 turnView
                 Spacer()
@@ -46,7 +44,7 @@ struct HomeView: View {
         VStack {
             Text("Turn: \(viewModel.turnLabel)")
                 .font(.largeTitle.bold())
-            HStack{
+            HStack {
                 Spacer()
             }
         }
@@ -54,7 +52,6 @@ struct HomeView: View {
         .background(.ultraThinMaterial)
         .cornerRadius(10)
         .padding()
-        //        relevant?
     }
     
     private var gameView: some View {
@@ -65,14 +62,18 @@ struct HomeView: View {
                         viewModel.boardTapAction(index)
                         HapticManager.notification(type: .warning)
                     }) {
-                        Text(viewModel.model.board[index])
-                            .font(.system(size: 60))
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .foregroundColor(.red)
-                            .aspectRatio(1, contentMode: .fit)
-                            .background(Color.white.opacity(0.9))
-                            .cornerRadius(10)
+                        ZStack {
+                            Color.white.opacity(0.9)
+                                .cornerRadius(10)
+                                .aspectRatio(1, contentMode: .fit)
+                            
+                            if !viewModel.model.board[index].isEmpty {
+                                Image(viewModel.model.board[index])
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 60, height: 60)
+                            }
+                        }
                     }
                     .disabled(viewModel.model.board[index] != "")
                 }
@@ -113,4 +114,3 @@ struct HomeView: View {
 #Preview {
     HomeView()
 }
-

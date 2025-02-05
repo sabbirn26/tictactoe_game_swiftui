@@ -7,15 +7,16 @@
 
 import Foundation
 
+import SwiftUI
 struct TicTacToeModel {
-    enum Turn {
-        case zero
-        case cross
-    }
-    
-    let zeroSymbol = "O"
-    let crossSymbol = "X"
-    var board: [String] = Array(repeating: "", count: 9)
+    var board = Array(repeating: "", count: 9)
+    let crossSymbol = "x" // Image name
+    let zeroSymbol = "o"   // Image name
     var currentTurn: Turn = .cross
+    
+    enum Turn {
+        case cross, zero
+    }
 }
+
 
