@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8925CDF22D532DF0008D69CE /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8925CDF12D532DF0008D69CE /* LaunchView.swift */; };
+		8925CDF52D532F90008D69CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8925CDF42D532F90008D69CE /* LaunchScreen.storyboard */; };
 		893D90682CD38AC400968AFC /* TicTacToeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D90672CD38AC400968AFC /* TicTacToeViewModel.swift */; };
 		893D906A2CD38ADD00968AFC /* TicTacToeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D90692CD38ADD00968AFC /* TicTacToeModel.swift */; };
 		89AC6EEF2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC6EEE2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift */; };
-		89AC6EF12CCE3C4900FFACE7 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC6EF02CCE3C4900FFACE7 /* GameView.swift */; };
+		89AC6EF12CCE3C4900FFACE7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC6EF02CCE3C4900FFACE7 /* HomeView.swift */; };
 		89AC6EF32CCE3C4B00FFACE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89AC6EF22CCE3C4B00FFACE7 /* Assets.xcassets */; };
 		89AC6EF62CCE3C4B00FFACE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89AC6EF52CCE3C4B00FFACE7 /* Preview Assets.xcassets */; };
 		89F6AC712D3FA9E2000F6BB0 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8925CDF12D532DF0008D69CE /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		8925CDF42D532F90008D69CE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		893D90672CD38AC400968AFC /* TicTacToeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewModel.swift; sourceTree = "<group>"; };
 		893D90692CD38ADD00968AFC /* TicTacToeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeModel.swift; sourceTree = "<group>"; };
 		89AC6EEB2CCE3C4900FFACE7 /* XOXO-TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XOXO-TicTacToe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AC6EEE2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XOXO_TicTacToeApp.swift; sourceTree = "<group>"; };
-		89AC6EF02CCE3C4900FFACE7 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		89AC6EF02CCE3C4900FFACE7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		89AC6EF22CCE3C4B00FFACE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89AC6EF52CCE3C4B00FFACE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
@@ -38,6 +42,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8925CDEE2D532D86008D69CE /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				8925CDF02D532DD9008D69CE /* ViewModel */,
+				8925CDEF2D532DC6008D69CE /* View */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		8925CDEF2D532DC6008D69CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8925CDF12D532DF0008D69CE /* LaunchView.swift */,
+				8925CDF42D532F90008D69CE /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8925CDF02D532DD9008D69CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8925CDF32D532E34008D69CE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				89F6AC732D3FB5D3000F6BB0 /* ViewModel */,
+				89F6AC722D3FB5C7000F6BB0 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		89AC6EE22CCE3C4900FFACE7 = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +116,8 @@
 		89AF125B2D5242F30011C8B9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				89F6AC732D3FB5D3000F6BB0 /* ViewModel */,
-				89F6AC722D3FB5C7000F6BB0 /* View */,
+				8925CDF32D532E34008D69CE /* Home */,
+				8925CDEE2D532D86008D69CE /* Launch */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -87,7 +125,7 @@
 		89F6AC722D3FB5C7000F6BB0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				89AC6EF02CCE3C4900FFACE7 /* GameView.swift */,
+				89AC6EF02CCE3C4900FFACE7 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8925CDF52D532F90008D69CE /* LaunchScreen.storyboard in Resources */,
 				89AC6EF62CCE3C4B00FFACE7 /* Preview Assets.xcassets in Resources */,
 				89AC6EF32CCE3C4B00FFACE7 /* Assets.xcassets in Resources */,
 			);
@@ -187,8 +226,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				893D906A2CD38ADD00968AFC /* TicTacToeModel.swift in Sources */,
+				8925CDF22D532DF0008D69CE /* LaunchView.swift in Sources */,
 				89F6AC712D3FA9E2000F6BB0 /* HapticManager.swift in Sources */,
-				89AC6EF12CCE3C4900FFACE7 /* GameView.swift in Sources */,
+				89AC6EF12CCE3C4900FFACE7 /* HomeView.swift in Sources */,
 				893D90682CD38AC400968AFC /* TicTacToeViewModel.swift in Sources */,
 				89AC6EEF2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift in Sources */,
 			);
@@ -330,6 +370,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -359,6 +400,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

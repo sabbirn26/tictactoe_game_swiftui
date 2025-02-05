@@ -1,12 +1,12 @@
 //
-//  GameView.swift
+//  HomeView.swift
 //  XOXO-TicTacToe
 //
 //  Created by Sabbir Nasir on 27/10/24.
 //
 import SwiftUI
 
-struct GameView: View {
+struct HomeView: View {
     @StateObject private var viewModel = TicTacToeViewModel()
     
     var body: some View {
@@ -111,6 +111,6 @@ struct GameView: View {
 }
 
 #Preview {
-    GameView()
+    HomeView()
 }
 
