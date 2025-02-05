@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8925CDF22D532DF0008D69CE /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8925CDF12D532DF0008D69CE /* LaunchView.swift */; };
 		8925CDF52D532F90008D69CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8925CDF42D532F90008D69CE /* LaunchScreen.storyboard */; };
+		8925CDF72D5332C7008D69CE /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8925CDF62D5332C7008D69CE /* LaunchViewModel.swift */; };
 		893D90682CD38AC400968AFC /* TicTacToeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D90672CD38AC400968AFC /* TicTacToeViewModel.swift */; };
 		893D906A2CD38ADD00968AFC /* TicTacToeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893D90692CD38ADD00968AFC /* TicTacToeModel.swift */; };
 		89AC6EEF2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC6EEE2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		8925CDF12D532DF0008D69CE /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		8925CDF42D532F90008D69CE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8925CDF62D5332C7008D69CE /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		893D90672CD38AC400968AFC /* TicTacToeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewModel.swift; sourceTree = "<group>"; };
 		893D90692CD38ADD00968AFC /* TicTacToeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeModel.swift; sourceTree = "<group>"; };
 		89AC6EEB2CCE3C4900FFACE7 /* XOXO-TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XOXO-TicTacToe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +65,7 @@
 		8925CDF02D532DD9008D69CE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8925CDF62D5332C7008D69CE /* LaunchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				893D906A2CD38ADD00968AFC /* TicTacToeModel.swift in Sources */,
 				8925CDF22D532DF0008D69CE /* LaunchView.swift in Sources */,
+				8925CDF72D5332C7008D69CE /* LaunchViewModel.swift in Sources */,
 				89F6AC712D3FA9E2000F6BB0 /* HapticManager.swift in Sources */,
 				89AC6EF12CCE3C4900FFACE7 /* HomeView.swift in Sources */,
 				893D90682CD38AC400968AFC /* TicTacToeViewModel.swift in Sources */,

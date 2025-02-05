@@ -8,32 +8,29 @@
 import SwiftUI
 
 struct LaunchView: View {
-    @State private var loadingText: [String] = "Whoever loses is kinda gay...".map{ String($0) }
-    @State private var showLoadingText: Bool = false
-    private let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
-    @State private var counter: Int = 0
-    @State private var loops: Int = 0
-    @Binding var showLaunchView: Bool
+    @StateObject private var vm: LaunchViewModel
+    
+    init(showLaunchView: Binding<Bool>) {
+        _vm = StateObject(wrappedValue: LaunchViewModel(showLaunchView: showLaunchView))
+    }
+    
     var body: some View {
-        ZStack{
+        ZStack {
             Color.black
                 .ignoresSafeArea()
             
             logoSection
             
-            ZStack{
-                if showLoadingText {
+            ZStack {
+                if vm.showLoadingText {
                     gameTitleSection
                 }
             }
             .offset(y: 70)
         }
         .onAppear {
-            showLoadingText.toggle()
+            vm.startTimer()
         }
-        .onReceive(timer, perform: { _ in
-            loopCounterMethod()
-        })
     }
 }
 
@@ -49,34 +46,17 @@ extension LaunchView {
             .frame(width: 100, height: 100)
     }
     
-    private var gameTitleSection : some View {
-        HStack(spacing: 0){
-            ForEach(loadingText.indices) { index in
-                Text(loadingText[index])
+    private var gameTitleSection: some View {
+        HStack(spacing: 0) {
+            ForEach(vm.loadingText.indices, id: \ .self) { index in
+                Text(vm.loadingText[index])
                     .font(.headline)
                     .fontWeight(.heavy)
                     .foregroundStyle(Color.blue)
-                    .offset(y: counter == index ? -5 : 0)
+                    .offset(y: vm.counter == index ? -5 : 0)
             }
         }
         .transition(AnyTransition.scale.animation(.easeIn))
-    }
-    
-    //MARK: METHODS
-    private func loopCounterMethod(){
-        withAnimation(.spring()){
-            let lastIndex = loadingText.count - 1
-            if counter == lastIndex {
-                counter = 0
-                loops += 1
-                
-                if loops >= 1 {
-                    showLaunchView = false
-                }
-            } else {
-                counter += 1
-            }
-        }
     }
 }
 
