@@ -54,7 +54,9 @@ struct HomeView: View {
         .fontWeight(.heavy)
         .padding()
         .background(.ultraThinMaterial)
+        .background(Color.blue.opacity(0.2))
         .cornerRadius(10)
+        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
         .padding()
     }
     
@@ -67,9 +69,10 @@ struct HomeView: View {
                         HapticManager.notification(type: .warning)
                     }) {
                         ZStack {
-                            Color.white.opacity(0.9)
+                            Color.white.opacity(0.8)
                                 .cornerRadius(10)
                                 .aspectRatio(1, contentMode: .fit)
+                                .shadow(radius: 3)
                             
                             if !viewModel.model.board[index].isEmpty {
                                 Image(viewModel.model.board[index])
@@ -78,6 +81,7 @@ struct HomeView: View {
                                     .frame(width: 60, height: 60)
                             }
                         }
+                        
                     }
                     .disabled(viewModel.model.board[index] != "")
                 }
@@ -85,14 +89,16 @@ struct HomeView: View {
             .padding()
         }
         .background(.ultraThinMaterial)
+        .background(Color.blue.opacity(0.2))
         .cornerRadius(10)
+        .shadow(radius: 10)
         .padding()
     }
     
     private var scoreView: some View {
         VStack {
-            Text("Score")
-            
+            Text("SCORE")
+                .underline(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, color: .blue)
             HStack {
                 Spacer()
                 Image("x")
@@ -125,7 +131,9 @@ struct HomeView: View {
         .fontWeight(.heavy)
         .padding()
         .background(.ultraThinMaterial)
+        .background(Color.blue.opacity(0.2))
         .cornerRadius(10)
+        .shadow(radius: 10)
         .padding()
     }
 }
