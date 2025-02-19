@@ -9,16 +9,16 @@ import SwiftUI
 
 struct XmarkButton: View {
     let dismiss: () -> Void
+    
     var body: some View {
         Button(action: {
-            print("<------- Protfolio bottom sheet dissmissed ------->")
+            print("❌ Portfolio bottom sheet dismissed!")
             dismiss()
         }, label: {
             Image(systemName: "xmark")
                 .font(.headline)
                 .fontWeight(.heavy)
                 .foregroundStyle(Color.white)
-            
         })
     }
 }
@@ -26,3 +26,4 @@ struct XmarkButton: View {
 #Preview {
     XmarkButton(dismiss: {})
 }
+
