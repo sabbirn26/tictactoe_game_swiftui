@@ -14,30 +14,28 @@ class LaunchViewModel: ObservableObject {
     @Published var counter: Int = 0
     @Published var loops: Int = 0
     private var timer: Timer?
-    @Binding var showLaunchView: Bool
     
-    init(showLaunchView: Binding<Bool>) {
-        self._showLaunchView = showLaunchView
+    init() {
         self.loadingText = "Whoever loses is kinda gay...".map { String($0) }
     }
     
-    func startTimer() {
+    func startTimer(completion: @escaping () -> Void) {
         showLoadingText = true
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            self.loopCounterMethod()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+            self?.loopCounterMethod(completion: completion)
         }
     }
     
-    private func loopCounterMethod() {
-        withAnimation(.spring()) {
+    private func loopCounterMethod(completion: @escaping () -> Void) {
+        withAnimation(.easeInOut(duration: 0.1)) {
             let lastIndex = loadingText.count - 1
             if counter == lastIndex {
                 counter = 0
                 loops += 1
                 
                 if loops >= 1 {
-                    showLaunchView = false
                     timer?.invalidate()
+                    completion()  // Call completion handler to change `showLaunchView`
                 }
             } else {
                 counter += 1
@@ -45,3 +43,4 @@ class LaunchViewModel: ObservableObject {
         }
     }
 }
+
