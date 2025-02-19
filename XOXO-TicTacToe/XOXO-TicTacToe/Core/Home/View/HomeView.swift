@@ -23,6 +23,7 @@ struct HomeView: View {
                     HStack {
                         CircleButtonView(iconName: "info")
                             .onTapGesture {
+                                print("ℹ️ Settings button tapped")
                                 viewModel.showSettingsView.toggle()
                             }
                         .animation(.none)
@@ -34,7 +35,6 @@ struct HomeView: View {
                             .cornerRadius(15)
                             .frame(width:40, height: 40)
                             .padding()
-                        
                     }
                     turnView
                     Spacer()
@@ -44,13 +44,16 @@ struct HomeView: View {
                 }
             }
             .alert(isPresented: $viewModel.showResult) {
-                Alert(
+                print("🎉 Showing result alert: \(viewModel.resultTitle)")
+                return Alert(
                     title: Text(viewModel.resultTitle),
                     message: Text("Zero: \(viewModel.zeroScore) Cross: \(viewModel.crossScore)"),
                     primaryButton: .default(Text("Play Again")) {
+                        print("🔄 Resetting board for a new round")
                         viewModel.resetBoard()
                     },
                     secondaryButton: .destructive(Text("Restart Game")) {
+                        print("🔁 Restarting game with reset scores")
                         viewModel.restartGame()
                     }
                 )
@@ -77,7 +80,7 @@ struct HomeView: View {
         .background(.ultraThinMaterial)
         .background(Color.blue.opacity(0.2))
         .cornerRadius(10)
-        .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+        .shadow(radius: 10)
         .padding()
     }
     
@@ -86,6 +89,7 @@ struct HomeView: View {
             LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 3), spacing: 10) {
                 ForEach(0..<9, id: \.self) { index in
                     Button(action: {
+                        print("🎯 Tile tapped at index \(index)")
                         viewModel.boardTapAction(index)
                         HapticManager.notification(type: .warning)
                     }) {
@@ -102,7 +106,6 @@ struct HomeView: View {
                                     .frame(width: 60, height: 60)
                             }
                         }
-                        
                     }
                     .disabled(viewModel.model.board[index] != "")
                 }
@@ -119,7 +122,7 @@ struct HomeView: View {
     private var scoreView: some View {
         VStack {
             Text("SCORE")
-                .underline(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, color: .blue)
+                .underline(true, color: .blue)
             HStack {
                 Spacer()
                 Image("x")
