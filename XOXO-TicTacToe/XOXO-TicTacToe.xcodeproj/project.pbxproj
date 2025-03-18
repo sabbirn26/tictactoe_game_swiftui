@@ -22,6 +22,7 @@
 		89D2D1A32D8942C5002BC6DA /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2D1A22D8942C5002BC6DA /* SoundManager.swift */; };
 		89D2D1A62D89466E002BC6DA /* x_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89D2D1A52D89466E002BC6DA /* x_sound.mp3 */; };
 		89D2D1A82D89468C002BC6DA /* o_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89D2D1A72D89468C002BC6DA /* o_sound.mp3 */; };
+		89D2D1AA2D8949A3002BC6DA /* win_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89D2D1A92D8949A3002BC6DA /* win_sound.mp3 */; };
 		89F6AC712D3FA9E2000F6BB0 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		89D2D1A22D8942C5002BC6DA /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		89D2D1A52D89466E002BC6DA /* x_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = x_sound.mp3; sourceTree = "<group>"; };
 		89D2D1A72D89468C002BC6DA /* o_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = o_sound.mp3; sourceTree = "<group>"; };
+		89D2D1A92D8949A3002BC6DA /* win_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win_sound.mp3; sourceTree = "<group>"; };
 		89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				89D2D1A72D89468C002BC6DA /* o_sound.mp3 */,
+				89D2D1A92D8949A3002BC6DA /* win_sound.mp3 */,
 				89D2D1A52D89466E002BC6DA /* x_sound.mp3 */,
 			);
 			path = Sound;
@@ -262,6 +265,7 @@
 				89AC6EF62CCE3C4B00FFACE7 /* Preview Assets.xcassets in Resources */,
 				89AC6EF32CCE3C4B00FFACE7 /* Assets.xcassets in Resources */,
 				89D2D1A62D89466E002BC6DA /* x_sound.mp3 in Resources */,
+				89D2D1AA2D8949A3002BC6DA /* win_sound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
