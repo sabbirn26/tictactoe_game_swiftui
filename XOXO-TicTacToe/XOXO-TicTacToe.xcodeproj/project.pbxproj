@@ -19,6 +19,9 @@
 		89AC6EF12CCE3C4900FFACE7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC6EF02CCE3C4900FFACE7 /* HomeView.swift */; };
 		89AC6EF32CCE3C4B00FFACE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89AC6EF22CCE3C4B00FFACE7 /* Assets.xcassets */; };
 		89AC6EF62CCE3C4B00FFACE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89AC6EF52CCE3C4B00FFACE7 /* Preview Assets.xcassets */; };
+		89D2D1A32D8942C5002BC6DA /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2D1A22D8942C5002BC6DA /* SoundManager.swift */; };
+		89D2D1A62D89466E002BC6DA /* x.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89D2D1A52D89466E002BC6DA /* x.mp3 */; };
+		89D2D1A82D89468C002BC6DA /* o.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89D2D1A72D89468C002BC6DA /* o.mp3 */; };
 		89F6AC712D3FA9E2000F6BB0 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		89AC6EF02CCE3C4900FFACE7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		89AC6EF22CCE3C4B00FFACE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89AC6EF52CCE3C4B00FFACE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		89D2D1A22D8942C5002BC6DA /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		89D2D1A52D89466E002BC6DA /* x.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = x.mp3; sourceTree = "<group>"; };
+		89D2D1A72D89468C002BC6DA /* o.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = o.mp3; sourceTree = "<group>"; };
 		89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,12 +148,22 @@
 		89AF125B2D5242F30011C8B9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				89D2D1A42D894651002BC6DA /* Sound */,
 				8925CDFB2D536164008D69CE /* Settings */,
 				8925CDF82D5360CC008D69CE /* Components */,
 				8925CDF32D532E34008D69CE /* Home */,
 				8925CDEE2D532D86008D69CE /* Launch */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		89D2D1A42D894651002BC6DA /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				89D2D1A72D89468C002BC6DA /* o.mp3 */,
+				89D2D1A52D89466E002BC6DA /* x.mp3 */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 		89F6AC722D3FB5C7000F6BB0 /* View */ = {
@@ -178,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */,
+				89D2D1A22D8942C5002BC6DA /* SoundManager.swift */,
 			);
 			path = "Utilities ";
 			sourceTree = "<group>";
@@ -240,9 +257,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D2D1A82D89468C002BC6DA /* o.mp3 in Resources */,
 				8925CDF52D532F90008D69CE /* LaunchScreen.storyboard in Resources */,
 				89AC6EF62CCE3C4B00FFACE7 /* Preview Assets.xcassets in Resources */,
 				89AC6EF32CCE3C4B00FFACE7 /* Assets.xcassets in Resources */,
+				89D2D1A62D89466E002BC6DA /* x.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +281,7 @@
 				89F6AC712D3FA9E2000F6BB0 /* HapticManager.swift in Sources */,
 				89AC6EF12CCE3C4900FFACE7 /* HomeView.swift in Sources */,
 				893D90682CD38AC400968AFC /* TicTacToeViewModel.swift in Sources */,
+				89D2D1A32D8942C5002BC6DA /* SoundManager.swift in Sources */,
 				89AC6EEF2CCE3C4900FFACE7 /* XOXO_TicTacToeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
