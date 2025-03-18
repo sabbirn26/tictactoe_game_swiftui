@@ -16,6 +16,7 @@ class SoundManager: ObservableObject {
     enum SoundOption : String {
         case x_sound
         case o_sound
+        case win_sound
     }
     
     func playSound(sound: SoundOption) {

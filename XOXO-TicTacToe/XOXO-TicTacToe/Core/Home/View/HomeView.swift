@@ -58,6 +58,7 @@ struct HomeView: View {
             // Alert to show game results
             .alert(isPresented: $viewModel.showResult) {
                 print("🎉 Showing result alert: \(viewModel.resultTitle)")
+                SoundManager.instance.playSound(sound: .win_sound)
                 return Alert(
                     title: Text(viewModel.resultTitle),
                     message: Text("Zero: \(viewModel.zeroScore) Cross: \(viewModel.crossScore)"),
