@@ -13,13 +13,13 @@ class SoundManager: ObservableObject {
     
     var player: AVAudioPlayer?
     
-    enum SoundOption : String{
-        case x
-        case o
+    enum SoundOption : String {
+        case x_sound
+        case o_sound
     }
     
-    func playSound() {
-        guard let url = Bundle.main.url(forResource: "x", withExtension: ".mp3") else { return }
+    func playSound(sound: SoundOption) {
+        guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: ".mp3") else { return }
         
         do {
             player = try AVAudioPlayer(contentsOf: url)

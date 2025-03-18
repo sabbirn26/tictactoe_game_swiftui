@@ -108,6 +108,8 @@ struct HomeView: View {
                         print("🎯 Tile tapped at index \(index)")
                         viewModel.boardTapAction(index) // Handle board tap action
                         HapticManager.notification(type: .warning) // Provide haptic feedback
+                        
+                        
                     }) {
                         ZStack {
                             Color.white.opacity(0.7)

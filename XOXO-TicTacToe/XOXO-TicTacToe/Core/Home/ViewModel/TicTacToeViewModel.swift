@@ -28,11 +28,13 @@ class TicTacToeViewModel: ObservableObject {
             model.currentTurn = .zero
             turnLabel = "O"
             print("✖️ 'X' placed at index \(index). Next turn: 'O'")
+            SoundManager.instance.playSound(sound: .o_sound)
         } else {
             model.board[index] = model.zeroSymbol
             model.currentTurn = .cross
             turnLabel = "X"
             print("⭕ 'O' placed at index \(index). Next turn: 'X'")
+            SoundManager.instance.playSound(sound: .x_sound)
         }
         
         checkForResult() // Check if the game has ended
