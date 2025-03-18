@@ -23,6 +23,7 @@
 		89D2D1A62D89466E002BC6DA /* x_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89D2D1A52D89466E002BC6DA /* x_sound.mp3 */; };
 		89D2D1A82D89468C002BC6DA /* o_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89D2D1A72D89468C002BC6DA /* o_sound.mp3 */; };
 		89D2D1AA2D8949A3002BC6DA /* win_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89D2D1A92D8949A3002BC6DA /* win_sound.mp3 */; };
+		89D2D1AC2D896091002BC6DA /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D2D1AB2D896091002BC6DA /* ViewExtension.swift */; };
 		89F6AC712D3FA9E2000F6BB0 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		89D2D1A52D89466E002BC6DA /* x_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = x_sound.mp3; sourceTree = "<group>"; };
 		89D2D1A72D89468C002BC6DA /* o_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = o_sound.mp3; sourceTree = "<group>"; };
 		89D2D1A92D8949A3002BC6DA /* win_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win_sound.mp3; sourceTree = "<group>"; };
+		89D2D1AB2D896091002BC6DA /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 			children = (
 				89F6AC702D3FA9E2000F6BB0 /* HapticManager.swift */,
 				89D2D1A22D8942C5002BC6DA /* SoundManager.swift */,
+				89D2D1AB2D896091002BC6DA /* ViewExtension.swift */,
 			);
 			path = "Utilities ";
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				8925CDFD2D53617C008D69CE /* SettingsView.swift in Sources */,
 				8925CDFA2D5360E6008D69CE /* CircleButtonView.swift in Sources */,
 				8925CDFF2D53631E008D69CE /* XmarkButton.swift in Sources */,
+				89D2D1AC2D896091002BC6DA /* ViewExtension.swift in Sources */,
 				89F6AC712D3FA9E2000F6BB0 /* HapticManager.swift in Sources */,
 				89AC6EF12CCE3C4900FFACE7 /* HomeView.swift in Sources */,
 				893D90682CD38AC400968AFC /* TicTacToeViewModel.swift in Sources */,
