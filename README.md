@@ -9,7 +9,7 @@ Screenshots 📱
       <img src="/screenshots/home.png" width="250" alt="Home View"/><br/>
       <em>Home View</em>
     </td>
-   <td align="center">
+    <td align="center">
       <img src="/screenshots/win_draw.png" width="250" alt="Scoreboard View"/><br/>
       <em>Scoreboard View</em>
     </td>
@@ -17,6 +17,8 @@ Screenshots 📱
       <img src="/screenshots/settings.png" width="250" alt="Settings View"/><br/>
       <em>Settings View</em>
     </td>
+  </tr>
+</table>
 
 ## Features
 
