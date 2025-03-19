@@ -72,6 +72,9 @@ struct HomeView: View {
                     }
                 )
             }
+//            .popup(isPresented: $viewModel.showResult, content: {
+//                <#code#>
+//            })
             // Settings sheet popup
             .sheet(isPresented: $viewModel.showSettingsView, content: {
                 SettingsView()
